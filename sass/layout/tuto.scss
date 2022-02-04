@@ -1,0 +1,19 @@
+.tuto {
+    & ol {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 3%;
+        @media (max-width: 900px) {
+        flex-direction : column;
+        }
+    }    
+        & li {
+        background-color: #F6F6F6;
+        padding: 1% 5%;
+        border : 1px solid red;
+        flex-grow: 1;
+        border-radius: 15px;
+    }
+}
+
+
