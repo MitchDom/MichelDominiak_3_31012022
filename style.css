@@ -65,21 +65,45 @@ header {
 }
 
 .tuto ol {
+  counter-reset: steps;
   display: flex;
-  flex-wrap: wrap;
-  gap: 3%;
+  gap: 2rem;
 }
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
   .tuto ol {
     flex-direction: column;
   }
 }
 .tuto li {
+  position: relative;
+  list-style-type: none;
   background-color: #F6F6F6;
-  padding: 1% 5%;
-  border: 1px solid red;
+  padding: 1.5rem 2rem;
   flex-grow: 1;
-  border-radius: 15px;
+  border-radius: 1rem;
+  box-shadow: 2px 1px 8px -3px #000000;
+}
+.tuto li::before {
+  content: counter(steps);
+  counter-increment: steps;
+  color: white;
+  background-color: #9356DC;
+  width: 2rem;
+  height: 2rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 1rem;
+  left: -1rem;
+}
+.tuto li:hover {
+  transform: scale(1.02);
+}
+.tuto li i.fas {
+  margin-right: 1rem;
+  color: lightgray;
+  font-size: 1.5rem;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,3 +1,6 @@
+@mixin base-shadow {
+    box-shadow: 2px 1px 8px -3px #000000;
+}
 
 .explorer{
     text-align: center;
@@ -18,7 +21,7 @@
         border-radius: 50px;
         transition: transform 200ms;
         margin-top: 40px;
-        box-shadow: 2px 1px 8px -3px #000000;
+        @include base-shadow;
     }
     & button:hover{
         transform: scale(1.02);
