@@ -1,0 +1,31 @@
+.menus{
+    background-color: #F6F6F6;
+    h2{
+        padding: 2rem 0;
+        margin: 1rem 0;
+    }
+
+    .menus__cards {
+        display: grid;
+        grid-template-columns: (1fr 1fr);
+        gap: 2rem;
+        @media (max-width: 900px) {
+        grid-template-columns: repeat(1, 1fr);
+        }
+    }
+
+    .card {
+        &__image{
+            height: 15rem;
+            border-radius: 1rem 1rem 0rem 0rem;
+            background-size: cover;
+        }
+        @for $i from 1 through 4 {
+            &__image-#{$i} {
+                background-image: url(images/restaurants/menu_restaurant_#{$i}.jpg); 
+            }
+        }
+    }
+    
+}
+

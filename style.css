@@ -12,7 +12,7 @@ body {
 }
 
 main {
-  padding: 0 5%;
+  padding: 0 7rem;
 }
 
 header {
@@ -66,6 +66,7 @@ header {
 
 .tuto ol {
   counter-reset: steps;
+  margin-bottom: 2rem;
   display: flex;
   gap: 2rem;
 }
@@ -94,7 +95,8 @@ header {
   place-items: center;
   border-radius: 50%;
   position: absolute;
-  bottom: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
   left: -1rem;
 }
 .tuto li:hover {
@@ -104,6 +106,41 @@ header {
   margin-right: 1rem;
   color: lightgray;
   font-size: 1.5rem;
+}
+
+.menus {
+  background-color: #F6F6F6;
+}
+.menus h2 {
+  padding: 2rem 0;
+  margin: 1rem 0;
+}
+.menus .menus__cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+@media (max-width: 900px) {
+  .menus .menus__cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.menus .card__image {
+  height: 15rem;
+  border-radius: 1rem 1rem 0rem 0rem;
+  background-size: cover;
+}
+.menus .card__image-1 {
+  background-image: url(images/restaurants/menu_restaurant_1.jpg);
+}
+.menus .card__image-2 {
+  background-image: url(images/restaurants/menu_restaurant_2.jpg);
+}
+.menus .card__image-3 {
+  background-image: url(images/restaurants/menu_restaurant_3.jpg);
+}
+.menus .card__image-4 {
+  background-image: url(images/restaurants/menu_restaurant_4.jpg);
 }
 
 /*# sourceMappingURL=style.css.map */
