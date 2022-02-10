@@ -14,6 +14,20 @@ body {
 main {
   padding: 0 7rem;
 }
+@media (max-width: 900px) {
+  main {
+    padding: 0rem 1rem;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h3, p {
+  margin: 0;
+}
 
 header {
   font-family: "Shrikhand", cursive;
@@ -110,6 +124,7 @@ header {
 
 .menus {
   background-color: #F6F6F6;
+  margin-bottom: 2rem;
 }
 .menus h2 {
   padding: 2rem 0;
@@ -156,6 +171,35 @@ header {
 }
 .menus .card__image-4 {
   background-image: url(images/restaurants/menu_restaurant_4.jpg);
+}
+.menus .card__description {
+  position: relative;
+  background-color: white;
+  border-radius: 0 0 1rem 1rem;
+}
+.menus .card__description h3,
+.menus .card__description p {
+  padding: 0.3rem;
+}
+.menus .card__description i {
+  font-size: 2rem;
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+footer {
+  background-color: #353535;
+  color: white;
+  padding: 1rem 2rem;
+}
+footer h2 {
+  font-family: "Shrikhand", sans-serif;
+  font-weight: 500;
+}
+footer p {
+  padding: 0.2rem;
 }
 
 /*# sourceMappingURL=style.css.map */

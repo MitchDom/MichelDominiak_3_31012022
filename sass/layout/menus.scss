@@ -1,5 +1,6 @@
 .menus{
     background-color: #F6F6F6;
+    margin-bottom: 2rem;
     h2{
         padding: 2rem 0;
         margin: 1rem 0;
@@ -41,6 +42,26 @@
         @for $i from 1 through 4 {
             &__image-#{$i} {
                 background-image: url(images/restaurants/menu_restaurant_#{$i}.jpg); 
+            }
+        }
+        &__description {
+            position: relative;
+            background-color: white;
+            border-radius: 0 0 1rem 1rem;
+
+            h3, 
+            p {
+                padding: 0.3rem;
+            }
+
+            
+            i {
+                font-size: 2rem;
+                position: absolute;
+                right: 1rem;
+                top: 50%;
+                transform: translateY(-50%);
+
             }
         }
     }
