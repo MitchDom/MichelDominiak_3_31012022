@@ -1,11 +1,6 @@
-@mixin base-shadow {
-    box-shadow: 2px 1px 8px -3px #000000;
-}
-
 .explorer{
     text-align: center;
     & h2{
-        margin-top: 30px;
         font-size: 30px;
     }
     & p{
@@ -14,10 +9,10 @@
     & button{
         color: white;
         font-weight: bold;
-        font-size: 25px;
-        padding: 1% 2%;
+        font-size: 1rem;
+        padding: 1.3rem 2rem;
         border: none;
-        background-image: linear-gradient(to top, #9356DC, #FF79DA);
+        background-image: linear-gradient(to top, $primaire, $secondaire);
         border-radius: 50px;
         transition: transform 200ms;
         margin-top: 40px;

@@ -1,12 +1,12 @@
-@mixin zoom {
-    transform: scale(1.02);
+.tuto h2 {
+    margin-left: 1rem;
 }
-
 
 .tuto {
     & ol {
         counter-reset: steps;
         margin-bottom: 2rem;
+        margin-right: 2rem;
         display: flex;
         gap: 2rem;
         @media (max-width: 1000px) {
@@ -19,7 +19,7 @@
                 content: counter(steps);
                 counter-increment: steps;
                 color: white;
-                background-color: #9656DC;
+                background-color: $primaire;
                 width: 2rem;
                 height: 2rem;
                 display: grid;
@@ -31,7 +31,7 @@
                 left: -1rem;
             }
         list-style-type: none;
-        background-color: #F6F6F6;
+        background-color: $lightgrey;
         padding:1.5rem 2rem;
         flex-grow: 1;
         border-radius: 1rem;
@@ -41,7 +41,7 @@
         }
         & i.fas {
             margin-right: 1rem;
-            color: lightgray;
+            color: grey;
             font-size: 1.5rem;
         }
     }

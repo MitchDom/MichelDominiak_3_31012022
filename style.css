@@ -12,11 +12,11 @@ body {
 }
 
 main {
-  padding: 0 7rem;
+  padding: 0 0rem;
 }
 @media (max-width: 900px) {
   main {
-    padding: 0rem 1rem;
+    padding: 0rem 0rem;
   }
 }
 
@@ -55,7 +55,6 @@ header {
   text-align: center;
 }
 .explorer h2 {
-  margin-top: 30px;
   font-size: 30px;
 }
 .explorer p {
@@ -64,8 +63,8 @@ header {
 .explorer button {
   color: white;
   font-weight: bold;
-  font-size: 25px;
-  padding: 1% 2%;
+  font-size: 1rem;
+  padding: 1.3rem 2rem;
   border: none;
   background-image: linear-gradient(to top, #9356DC, #FF79DA);
   border-radius: 50px;
@@ -78,9 +77,14 @@ header {
   opacity: 0.9;
 }
 
+.tuto h2 {
+  margin-left: 1rem;
+}
+
 .tuto ol {
   counter-reset: steps;
   margin-bottom: 2rem;
+  margin-right: 2rem;
   display: flex;
   gap: 2rem;
 }
@@ -102,7 +106,7 @@ header {
   content: counter(steps);
   counter-increment: steps;
   color: white;
-  background-color: #9656DC;
+  background-color: #9356DC;
   width: 2rem;
   height: 2rem;
   display: grid;
@@ -118,7 +122,7 @@ header {
 }
 .tuto li i.fas {
   margin-right: 1rem;
-  color: lightgray;
+  color: grey;
   font-size: 1.5rem;
 }
 
@@ -128,11 +132,14 @@ header {
 }
 .menus h2 {
   padding: 2rem 0;
-  margin: 1rem 0;
+  margin: 1rem 1rem;
 }
 .menus .menus__cards {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  margin: 1rem;
+  padding-bottom: 2rem;
+  margin-bottom: -2rem;
   gap: 2rem;
 }
 @media (max-width: 900px) {
