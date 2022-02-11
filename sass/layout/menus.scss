@@ -66,6 +66,19 @@
                 transform: translateY(-50%);
 
             }
+
+            .fas {
+                color: transparent;
+                background-image: linear-gradient($primaire, $secondaire);
+                background-clip: text;
+                -webkit-background-clip: text;
+                opacity: 0;
+                transition: all 200ms ease-in-out;
+            }
+            &:hover .fas {
+                opacity: 1;
+                transform: translateY(-50%) scale(1.2);
+            }
         }
     }
     
