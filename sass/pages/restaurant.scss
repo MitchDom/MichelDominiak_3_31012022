@@ -1,12 +1,30 @@
-img {
-    max-width: 100%;
+
+
+
+body {
+    background-color: $lightgrey;
 }
 
+.banner img {
+    display: block;
+    width: 100%;
+    height: 60vh;
+    object-fit: cover;
+    object-position: center bottom;
+}
 
-main {
+.main {
+    padding: 1px 0px;
+}
+
+.resto__main {
+    background-color: white;
+    border-radius: 2rem 2rem 0 0;
     position: relative;
+    margin-top: -3rem;
    h2 {
-    padding: 1rem;
+    font-family: "Shrikhand", sans-serif;
+    padding: 2rem 1rem;
    }
    i {
     font-size: 2rem;
@@ -31,3 +49,88 @@ main {
 
 }
  
+.menu-resto {
+    margin: 1rem;
+    background-color: $lightgrey;
+}
+
+.menus {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    @media (max-width: 900px) {
+        grid-template-columns: 1fr;
+    }
+
+    .menus__category {
+        overflow: hidden;
+        border-radius: 1rem;
+        gap: 2rem;
+        .menu-items {
+            display: flex;
+            background-color: white;
+            overflow: hidden;
+            border-radius: 1rem;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            margin: 1.5rem;
+            box-shadow: 3px 3px 3px $darkgrey;
+            .menu-items__price {
+                margin-left: auto;
+                font-weight: bold;
+                margin-top: 3rem;
+                padding: 1rem;
+                display: flex;
+                align-items: flex-end;    
+            }
+            .menu-items__description {
+                padding: 1rem;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                h4,
+                p {
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                }
+            }
+            .menu-items__check {
+                display: grid;
+                place-items: center;
+                $button-width :3rem; /** création d'une variable locale OK en scss **/
+                background-color: $tertiaire;
+                margin-right: -1 * $button-width;
+                width: $button-width;
+                transition: margin-right 0.5s;
+                i {
+                    display: grid;
+                    place-items: center;
+                    background-color: white;
+                    width: 2rem;
+                    height: 2rem;
+                    border-radius: 1rem;
+                    color: $tertiaire;
+                }
+            }
+            &:hover {
+
+            .menu-items__check {
+                margin-right: 0;
+            }
+            i {
+                @keyframes iconspin {
+                    0% {
+                        transform: rotate(-270deg);
+                    }
+                    100% {
+                        transform: rotate(0);
+                    }
+                }
+                animation: iconspin 0.5s ease-in-out;
+            }
+
+            }
+        }
+    }
+}
