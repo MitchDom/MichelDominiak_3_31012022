@@ -1,3 +1,7 @@
 @mixin zoom {
     transform: scale(1.02);
 }
+
+@mixin zoombig {
+    transform: scale(1.2);
+}

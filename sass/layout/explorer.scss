@@ -12,3 +12,48 @@
     }
   
 }
+
+.loader {
+    $animation-duration: 1s;
+    $animation-count: 3;
+    position:fixed;
+    display: grid;
+    place-items: center;
+    background-color: #ffffff;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0.9; 
+    animation: desappear 200ms;
+    animation-fill-mode: forwards;
+    animation-delay: $animation-duration*$animation-count;
+    transform-origin: top;
+    &::after {
+        content:"";
+        height: 100px;
+        width: 100px;
+        border-right: 5px solid transparent;
+        border-top: 5px solid $primaire;
+        border-radius: 50%;
+        animation: spin $animation-duration infinite ease-in-out;
+        animation-iteration-count: $animation-count;
+    }
+}
+
+@keyframes desappear {
+   0% {
+       transform: scale(1);
+   } 
+   100% {
+       transform: scale(0);
+   }
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}

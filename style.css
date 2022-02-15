@@ -30,6 +30,16 @@ h3, p {
   margin: 0;
 }
 
+@keyframes appear {
+  0% {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 header {
   font-family: "Shrikhand", cursive;
   text-align: center;
@@ -79,6 +89,47 @@ header {
   opacity: 0.9;
 }
 
+.loader {
+  position: fixed;
+  display: grid;
+  place-items: center;
+  background-color: #ffffff;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  opacity: 0.9;
+  animation: desappear 200ms;
+  animation-fill-mode: forwards;
+  animation-delay: 3s;
+  transform-origin: top;
+}
+.loader::after {
+  content: "";
+  height: 100px;
+  width: 100px;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #9356DC;
+  border-radius: 50%;
+  animation: spin 1s infinite ease-in-out;
+  animation-iteration-count: 3;
+}
+
+@keyframes desappear {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
 .tuto h2 {
   margin-left: 1rem;
 }
@@ -231,6 +282,29 @@ body {
   background-color: #F6F6F6;
 }
 
+header {
+  height: 10vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+header h1 {
+  margin: auto;
+}
+header i {
+  margin-left: 2rem;
+  font-size: 1.5rem;
+  transition: transform 600ms;
+}
+header i:hover {
+  transform: scale(1.2);
+}
+
+header::before i {
+  content: "";
+  position: absolute;
+}
+
 h3 {
   text-transform: uppercase;
   position: relative;
@@ -314,6 +388,17 @@ h3::after {
   text-overflow: ellipsis;
   margin: 1.5rem;
   box-shadow: 3px 3px 3px #e4e4e4;
+  animation: appear 1s;
+  animation-fill-mode: both;
+}
+.menus .menus__category .menu-items:nth-child(1) {
+  animation-delay: 100ms;
+}
+.menus .menus__category .menu-items:nth-child(2) {
+  animation-delay: 200ms;
+}
+.menus .menus__category .menu-items:nth-child(3) {
+  animation-delay: 300ms;
 }
 .menus .menus__category .menu-items h4 {
   margin: 0;
