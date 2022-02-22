@@ -90,6 +90,7 @@ header {
 .explorer button:hover {
   transform: scale(1.02);
   opacity: 0.9;
+  box-shadow: 3px 2px 10px 1px grey;
 }
 
 .loader {
@@ -439,8 +440,8 @@ header::before i {
   place-items: center;
   /** création d'une variable locale OK en scss **/
   background-color: #99E2D0;
-  margin-right: -3rem;
-  width: 3rem;
+  margin-right: -6rem;
+  width: 6rem;
   transition: margin-right 0.5s;
 }
 .menu-resto .menus .menus__category .menu-items .menu-items__check i {
@@ -491,6 +492,7 @@ header::before i {
 .menu-resto section.order button:hover {
   transform: scale(1.02);
   opacity: 0.9;
+  box-shadow: 3px 2px 10px 1px grey;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -142,7 +142,7 @@ header::before{
             .menu-items__check {
                 display: grid;
                 place-items: center;
-                $button-width :3rem; /** création d'une variable locale OK en scss **/
+                $button-width :6rem; /** création d'une variable locale OK en scss **/
                 background-color: $tertiaire;
                 margin-right: -1 * $button-width;
                 width: $button-width;
